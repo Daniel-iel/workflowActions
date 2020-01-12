@@ -15,6 +15,6 @@ jobs:
     - name: Build
       working-directory: ./web
       run: |
-        npm run test
+        npm run build
 
 
