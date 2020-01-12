@@ -10,8 +10,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install
+      working-directory: ./web
       run: npm install
     - name: Build
+      working-directory: ./web
       run: |
         npm run build,
         npm run test,
