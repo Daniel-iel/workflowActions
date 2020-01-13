@@ -19,14 +19,9 @@ jobs:
       run: |
         npm run build
     
-    - name: Art
-      run: |
-          mkdir -p path/to/artifact
-          echo hello > path/to/artifact/index.html
-          
-    - uses: actions/upload-artifact@v1
+    - name: Artifact
+      uses: actions/upload-artifact@v1
       with:
-        name: my-artifact
-        path: path/to/artifact
-  
+          name: dist
+          path: dist
 
