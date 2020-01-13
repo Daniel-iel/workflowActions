@@ -20,7 +20,7 @@ jobs:
         npm run build
     
     - run: mkdir -p dist
-    - run: echo hello > dist
+    - run: echo hello > dist/*
     - uses: actions/upload-artifact@v1
       with:
         name: my-artifact
