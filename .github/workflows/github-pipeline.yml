@@ -19,11 +19,15 @@ jobs:
       run: |
         npm run build
     
-    - run: mkdir -p dist
-    - run: echo hello > dist/*
+    - uses: actions/upload-artifact@v1
+     
+    - name: Art
+      run: |
+          mkdir -p path/to/artifact
+          echo hello > path/to/artifact/world.txt
     - uses: actions/upload-artifact@v1
       with:
         name: my-artifact
-        path: dist/*
-
+        path: path/to/artifact
+  
 
