@@ -19,8 +19,6 @@ jobs:
       run: |
         npm run build
     
-    - uses: actions/upload-artifact@v1
-     
     - name: Art
       run: |
           mkdir -p path/to/artifact
