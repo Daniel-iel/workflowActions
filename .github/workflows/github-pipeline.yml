@@ -24,7 +24,8 @@ jobs:
     - name: Art
       run: |
           mkdir -p path/to/artifact
-          echo hello > path/to/artifact/world.txt
+          echo hello > path/to/artifact/index.html
+          
     - uses: actions/upload-artifact@v1
       with:
         name: my-artifact
