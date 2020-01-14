@@ -12,7 +12,7 @@ jobs:
     - name: Read .nvmrc
       id: nvm
       run: |
-            echo ::set-output name=NVMRC::$(cat ./web/.nvmrc)
+            echo ::set-output name=NVMRC::$(cat .nvmrc)
             echo '${{ steps.nvm.outputs.NVMRC }}'
                 
     - name: Setup node
