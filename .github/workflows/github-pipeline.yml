@@ -13,7 +13,7 @@ jobs:
       id: nvm
       run: |
             echo ::set-output name=NVMRC::$(cat ./web/.nvmrc)
-            echo $steps.nvm.outputs.NVMRC
+            echo '${{ steps.nvm.outputs.NVMRC }}'
                 
     - name: Setup node
       uses: actions/setup-node@v1
