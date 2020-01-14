@@ -8,6 +8,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+    - name: Read .nvmrc
+      run: echo ::set-output name=NVMRC::$(cat web/.nvmrc)
+      id: nvm
+
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '${{ steps.nvm.outputs.NVMRC }}'
+                    
     - uses: actions/checkout@v1
       
     - name: Install
